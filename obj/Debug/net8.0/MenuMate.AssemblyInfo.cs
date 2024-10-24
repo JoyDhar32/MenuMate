@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MenuMate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3f2095c25ced65006c1ca85159c271e8a8b425a")]
 [assembly: System.Reflection.AssemblyProductAttribute("MenuMate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MenuMate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
