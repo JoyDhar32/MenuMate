@@ -1,9 +1,14 @@
 ﻿using MenuMate.Data;
 using MenuMate.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+
 
 namespace MenuMate.Controllers
 {
+
+
     public class ProductController : Controller
     {
         private Repository<Product> products;
@@ -135,4 +140,7 @@ namespace MenuMate.Controllers
             }
         }
     }
+
+
+
 }
