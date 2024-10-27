@@ -16,6 +16,12 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.R
 
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set your timeout here
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,11 +41,14 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();  // Ensures authentication is used
 app.UseAuthorization();
+
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"); // Sets 'Home' as the default controller
 app.MapRazorPages();
 
 app.Run();

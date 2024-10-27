@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fcjwX2lJLM/+G6pZgHp0CS0Cya1nKNNeQ/JQ31BxTL8=",
+  "Hash": "e5Ll2GlYbKBQtTifrzU7PgSxqX5maau1wLTVPJ+S47A=",
   "Source": "MenuMate",
   "BasePath": "_content/MenuMate",
   "Mode": "Default",
@@ -1307,6 +1307,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\chickentacos.jpg"
+    },
+    {
+      "Identity": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\e6824fb2-be13-424a-b739-21ac6a9ca433_goattacos.png",
+      "SourceId": "MenuMate",
+      "SourceType": "Discovered",
+      "ContentRoot": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\",
+      "BasePath": "_content/MenuMate",
+      "RelativePath": "images/e6824fb2-be13-424a-b739-21ac6a9ca433_goattacos.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\e6824fb2-be13-424a-b739-21ac6a9ca433_goattacos.png"
     },
     {
       "Identity": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\fishtacos.jpg",
