@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container py-5">
+    <!-- Header Section -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Contact Us</h1>
+        <p class="lead">We'd love to hear from you! Reach out with any questions or feedback, and we'll get back to you as soon as possible.</p>
+    </div>
+
+    <div class="row">
+        <!-- Contact Details Section -->
+        <div class="col-md-5">
+            <h3 class="mb-4">Get In Touch</h3>
+            <ul class="list-unstyled">
+                <li class="mb-3">
+                    <i class="fas fa-envelope fa-lg text-primary"></i>
+                    <strong> Email:</strong> support@menumate.com
+                </li>
+                <li class="mb-3">
+                    <i class="fas fa-phone fa-lg text-primary"></i>
+                    <strong> Phone:</strong> (123) 456-7890
+                </li>
+                <li class="mb-3">
+                    <i class="fas fa-map-marker-alt fa-lg text-primary"></i>
+                    <strong> Address:</strong>85 Railway Street, Banksia, NSW, 2216
+                </li>
+                <li class="mb-3">
+                    <i class="fas fa-clock fa-lg text-primary"></i>
+                    <strong> Hours:</strong> Mon - Fri: 9 AM - 6 PM
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="col-md-7">
+            <h3 class="mb-4">Send Us a Message</h3>
+            <form onsubmit="showPopup(event)">
+                <div class="form-group mb-3">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Write your message here" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="mt-5">
+        <h3 class="mb-4">Our Location</h3>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093745!2d144.95592831532252!3d-37.8172099797516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43bf2dfd7b%3A0x5045675218ce7e0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1633929210920!5m2!1sen!2sus" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- JavaScript to show popup -->
+<script>
+    function showPopup(event) {
+        event.preventDefault(); // Prevent the form from submitting to allow showing the popup
+        alert("Query submitted successfully!");
+
+        // Here you can optionally reset the form if needed
+        event.target.reset();
+    }
+</script>
