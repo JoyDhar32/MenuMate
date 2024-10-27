@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Ingredient>
+
+@{
+    // Set the page title for the browser and header
+    ViewBag.Title = "List of Restaurant Ingredients";
+}
+
+<h1>Ingredients</h1>
+
+<!-- Link to navigate to the Create view for adding a new ingredient -->
+<a asp-action="Create">Create New Ingredient</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <!-- Display the column header for the ingredient's name -->
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th> <!-- Empty column header for action buttons (Details, Edit, Delete) -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Loop through each ingredient in the model to display its data -->
+        @foreach (Ingredient i in Model)
+        {
+            <tr>
+                <td>
+                    <!-- Display the name of each ingredient -->
+                    @Html.DisplayFor(modelItem => i.Name)
+                </td>
+                <td>
+                    <!-- Links for various actions: Details, Edit, and Delete, with Ingredient ID as a route parameter -->
+                    <a asp-action="Details" asp-route-id="@i.IngredientId">Details</a>
+                    <a asp-action="Edit" asp-route-id="@i.IngredientId">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@i.IngredientId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

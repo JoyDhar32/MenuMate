@@ -1,0 +1,33 @@
+﻿@model Ingredient
+
+@{
+    // Set the page title dynamically to indicate editing of a specific ingredient
+    ViewBag.Title = $"Edit {Model.Name} Ingredient";
+}
+
+<h3>Edit Ingredient</h3>
+
+<!-- Form to edit an existing ingredient, posts data to the Edit action method -->
+<form asp-action="Edit" method="post">
+    <!-- Hidden input to pass the IngredientId to identify the record being edited -->
+    <input type="hidden" asp-for="IngredientId" />
+
+    <div class="form-group">
+        <!-- Label for the Name field, bound to the model's Name property -->
+        <label asp-for="Name"></label>
+
+        <!-- Input field for editing the Name property, styled with Bootstrap's form control -->
+        <input asp-for="Name" class="form-control" />
+
+        <!-- Validation message for the Name field, displayed in red if validation fails -->
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <!-- Submit button to save the changes, styled as a primary button -->
+        <input type="submit" value="Save" class="btn btn-primary" />
+
+        <!-- Link to go back to the ingredient list without saving changes -->
+        <a asp-action="Index" class="btn btn-default">Back to List</a>
+    </div>
+</form>

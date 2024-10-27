@@ -1,0 +1,29 @@
+﻿@model Ingredient
+@{
+    // Set the page title for the browser and header
+    ViewBag.Title = "Create Ingredient";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <!-- Form to create a new ingredient, posts data to the Create action -->
+        <form asp-action="Create" method="post">
+            <div class="form-group">
+                <!-- Label for the Name field, automatically binds to the model's Name property -->
+                <label asp-for="Name"></label>
+
+                <!-- Input field for the Name property, with Bootstrap styling for form control -->
+                <input asp-for="Name" class="form-control" />
+
+                <!-- Validation message for the Name field, displayed if validation fails -->
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <!-- Submit button to create the ingredient -->
+            <button type="submit" class="btn btn-primary">Create</button>
+
+            <!-- Link to go back to the ingredient list -->
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </form>
+    </div>
+</div>

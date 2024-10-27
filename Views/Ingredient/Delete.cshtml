@@ -1,0 +1,25 @@
+﻿@model Ingredient
+@{
+   // Set the page title to indicate deletion of a specific ingredient
+    ViewBag.Title = $"Delete {Model.Name} Ingredient";
+}
+
+// Prompt to confirm deletion of the ingredient
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <!-- Display the name of the ingredient being deleted -->
+    <h4>@Model.Name</h4>
+
+    <!-- Form to confirm deletion, posting data to the Delete action -->
+    <form asp-action="Delete" method="post">
+        <!-- Hidden input to pass the IngredientId for deletion identification -->
+        <input type="hidden" asp-for="IngredientId" />
+
+        <!-- Submit button for deletion, styled as a red 'Delete' button for emphasis -->
+        <input type="submit" value="Delete" class="btn btn-danger" />
+
+        <!-- Button to return to the ingredient list without making changes -->
+        <a asp-action="Index" class="btn btn-default">Back to List</a>
+    </form>
+</div>

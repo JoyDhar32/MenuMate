@@ -1,0 +1,39 @@
+﻿@model Ingredient
+@{
+    // Set the page title for the browser and header
+    ViewBag.Title = "Ingredient Details";
+}
+
+ <!-- Display the ingredient's name as the main heading ---->
+
+<h1>@Model.Name Details</h1>
+
+
+@if (Model.ProductIngredients != null && Model.ProductIngredients.Any())
+{
+    <h4>Products</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Name</th> <!-- Column for the product name -->
+                <th>Description</th>  <!-- Column for the product description -->
+                <th>Price</th>        <!-- Column for the product price -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var productIngredient in Model.ProductIngredients) // Loop through each product ingredient
+            {
+                <tr>
+                    <td>@productIngredient.Product.Name</td>        <!-- Display the name of the product -->
+                    <td>@productIngredient.Product.Description</td> <!-- Display the product description -->
+                    <td>@productIngredient.Product.Price</td>       <!-- Display the product price -->
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+// Provide a link to navigate back to the list of ingredients
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

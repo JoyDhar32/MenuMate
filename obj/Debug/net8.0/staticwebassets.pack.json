@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\chickentacos.jpg",
+      "PackagePath": "staticwebassets\\images\\chickentacos.jpg"
+    },
+    {
+      "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\fishtacos.jpg",
+      "PackagePath": "staticwebassets\\images\\fishtacos.jpg"
+    },
+    {
+      "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\goattacos.png",
+      "PackagePath": "staticwebassets\\images\\goattacos.png"
+    },
+    {
       "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,8 +1,53 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "MenuMate - Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center my-5">
+    <h1 class="display-4 font-weight-bold text-primary">Welcome to MenuMate</h1>
+    <p class="lead text-secondary">Your one-stop solution to manage restaurant menus effortlessly.</p>
+    <p class="mb-4">Discover the easiest way to add, edit, and organize your menu items.</p>
+
+    <!-- Call to Action Buttons -->
+    <div class="d-flex justify-content-center mt-3">
+        <a href="/Ingredient" class="btn btn-success btn-lg mx-2">View Ingredients</a>
+        <a href="/Category" class="btn btn-info btn-lg mx-2">View Categories</a>
+        <a href="/Product" class="btn btn-primary btn-lg mx-2">View Products</a>
+    </div>
+
+    <!-- Featured Section -->
+    <section class="mt-5">
+        <h2 class="h3 mb-3 font-weight-bold text-dark">Why Choose MenuMate?</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-4 p-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Easy Management</h5>
+                        <p class="card-text">Manage your ingredients, categories, and products with just a few clicks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Flexible Customization</h5>
+                        <p class="card-text">Customize each item to reflect your restaurant's unique style and flavor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 p-3">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">User-Friendly Interface</h5>
+                        <p class="card-text">Designed with simplicity in mind, MenuMate is easy for anyone to use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Additional Resources -->
+    <footer class="mt-5 text-muted">
+        <p>For more resources, visit <a href="https://learn.microsoft.com/aspnet/core" target="_blank">ASP.NET Core documentation</a>.</p>
+        <small>&copy; @DateTime.Now.Year MenuMate. All rights reserved.</small>
+    </footer>
 </div>
