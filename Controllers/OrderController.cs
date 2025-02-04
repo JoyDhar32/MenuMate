@@ -1,9 +1,7 @@
 ﻿using MenuMate.Data;
 using MenuMate.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
+
 namespace MenuMate.Controllers
 {
     public class OrderController : Controller
@@ -11,35 +9,28 @@ namespace MenuMate.Controllers
         private readonly ApplicationDbContext _context;
         private Repository<Product> _products;
         private Repository<Order> _orders;
-        private readonly UserManager<ApplicationUser> _userManager;
 
-        public OrderController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public OrderController(ApplicationDbContext context)
         {
             _context = context;
-            _userManager = userManager;
             _products = new Repository<Product>(context);
             _orders = new Repository<Order>(context);
         }
 
-        [Authorize]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            //ViewBag.Products = await _products.GetAllAsync();
-
-            //Retrieve or create an OrderViewModel from session or other state management
+            // Retrieve or create an OrderViewModel from session or other state management
             var model = HttpContext.Session.Get<OrderViewModel>("OrderViewModel") ?? new OrderViewModel
             {
                 OrderItems = new List<OrderItemViewModel>(),
                 Products = await _products.GetAllAsync()
             };
 
-
             return View(model);
         }
 
         [HttpPost]
-        [Authorize]
         public async Task<IActionResult> AddItem(int prodId, int prodQty)
         {
             var product = await _context.Products.FindAsync(prodId);
@@ -85,10 +76,8 @@ namespace MenuMate.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> Cart()
         {
-
             // Retrieve the OrderViewModel from session or other state management
             var model = HttpContext.Session.Get<OrderViewModel>("OrderViewModel");
 
@@ -101,7 +90,6 @@ namespace MenuMate.Controllers
         }
 
         [HttpPost]
-        [Authorize]
         public async Task<IActionResult> PlaceOrder()
         {
             var model = HttpContext.Session.Get<OrderViewModel>("OrderViewModel");
@@ -114,8 +102,8 @@ namespace MenuMate.Controllers
             Order order = new Order
             {
                 OrderDate = DateTime.Now,
-                TotalAmount = model.TotalAmount,
-                UserId = _userManager.GetUserId(User)
+                TotalAmount = model.TotalAmount
+                // UserId field removed
             };
 
             // Add OrderItems to the Order entity
@@ -139,22 +127,5 @@ namespace MenuMate.Controllers
             return RedirectToAction("ViewOrders");
         }
 
-        [HttpGet]
-        [Authorize]
-        public async Task<IActionResult> ViewOrders()
-        {
-            var userId = _userManager.GetUserId(User);
-
-            var userOrders = await _orders.GetAllByIdAsync(userId, "UserId", new QueryOptions<Order>
-            {
-                Includes = "OrderItems.Product"
-            });
-
-            return View(userOrders);
-        }
-
-
-
     }
-
 }

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\16ff5091-e894-4c4e-9118-7c3d514b4ca7_Screenshot 2024-10-28 090559.png",
+      "PackagePath": "staticwebassets\\images\\16ff5091-e894-4c4e-9118-7c3d514b4ca7_Screenshot 2024-10-28 090559.png"
+    },
+    {
       "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\21242f0c-4565-4e02-9a6f-8a7dc228a7fa_goattacos.png",
       "PackagePath": "staticwebassets\\images\\21242f0c-4565-4e02-9a6f-8a7dc228a7fa_goattacos.png"
     },
@@ -21,12 +25,20 @@
       "PackagePath": "staticwebassets\\images\\456a3a03-84c0-45de-8266-6d73172e7b18_goattacos.png"
     },
     {
+      "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\4afd70fb-eda4-4b5e-9cff-2d7ad16d47e7_goattacos.png",
+      "PackagePath": "staticwebassets\\images\\4afd70fb-eda4-4b5e-9cff-2d7ad16d47e7_goattacos.png"
+    },
+    {
       "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\4fc06e5e-bb96-4856-b01e-8eda6f9f7149_Screenshot 2024-10-28 090450.png",
       "PackagePath": "staticwebassets\\images\\4fc06e5e-bb96-4856-b01e-8eda6f9f7149_Screenshot 2024-10-28 090450.png"
     },
     {
       "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\5dbfcb62-7ea9-4b8f-bbd2-0f80ab4746ac_Screenshot 2024-10-28 090544.png",
       "PackagePath": "staticwebassets\\images\\5dbfcb62-7ea9-4b8f-bbd2-0f80ab4746ac_Screenshot 2024-10-28 090544.png"
+    },
+    {
+      "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\69ea866c-78cd-4045-b091-175a435245f0_Screenshot 2024-10-28 090622.png",
+      "PackagePath": "staticwebassets\\images\\69ea866c-78cd-4045-b091-175a435245f0_Screenshot 2024-10-28 090622.png"
     },
     {
       "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\85af5159-4c92-402f-afa3-db8251ff3a36_2.png",
@@ -39,6 +51,10 @@
     {
       "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\a812fca1-3f26-4eb0-8eba-1d0ca5fdaf97_Screenshot 2024-10-28 090559.png",
       "PackagePath": "staticwebassets\\images\\a812fca1-3f26-4eb0-8eba-1d0ca5fdaf97_Screenshot 2024-10-28 090559.png"
+    },
+    {
+      "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\c751bb87-9881-4797-84cc-4c770d3afd7a_Screenshot 2024-10-28 090544.png",
+      "PackagePath": "staticwebassets\\images\\c751bb87-9881-4797-84cc-4c770d3afd7a_Screenshot 2024-10-28 090544.png"
     },
     {
       "Id": "H:\\Journey to UTS\\4th Semester\\C#\\MenuMate\\wwwroot\\images\\chickentacos.jpg",
