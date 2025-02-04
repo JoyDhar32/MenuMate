@@ -44,7 +44,7 @@ Ensure you have the following installed:
 1. Download MenuMate.zip
    Extract the file
    ```
-
+   git clone https://github.com/JoyDhar32/MenuMate.git
    ```
 2. Navigate into the project directory:
    ```bash
