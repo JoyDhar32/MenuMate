@@ -1,4 +1,3 @@
-
 ---
 
 # MenuMate
@@ -43,7 +42,9 @@ Ensure you have the following installed:
 ### Installation
 
 1. Download MenuMate.zip
-    Extract the file
+   Extract the file
+   ```
+
    ```
 2. Navigate into the project directory:
    ```bash
@@ -53,6 +54,7 @@ Ensure you have the following installed:
 ### Database Setup
 
 1. Update the connection string in `appsettings.json`:
+
    ```json
    "ConnectionStrings": {
      "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MenuMateDb;Trusted_Connection=True;MultipleActiveResultSets=true"
@@ -60,6 +62,7 @@ Ensure you have the following installed:
    ```
 
 2. Apply migrations to set up the database schema:
+
    ```bash
    dotnet ef database update
    ```
@@ -73,21 +76,25 @@ Ensure you have the following installed:
 ## Project Structure
 
 - **Controllers/**: Contains controllers for handling requests related to home, ingredients, and products.
+
   - `HomeController.cs`: Handles main navigation and homepage.
   - `IngredientController.cs`: Manages ingredient-related actions (Add, Edit, Delete, View).
   - `ProductController.cs`: Handles CRUD operations for menu items (products).
 
 - **Data/**: Contains the database context and migration files.
+
   - `ApplicationDbContext.cs`: Defines the main database context for Entity Framework.
   - `Migrations/`: Contains EF Core migration files for tracking database changes.
 
 - **Models/**: Contains the model classes defining the data structure.
+
   - `Ingredient.cs`: Defines the ingredient entity with properties such as `IngredientId` and `Name`.
   - `Product.cs`: Defines the product (menu item) with properties like `Name`, `Description`, `Price`, and `Stock`.
   - `Category.cs`: Defines categories for organizing products.
   - `Order.cs` and `OrderItem.cs`: Placeholder models that may represent orders in a future version.
 
 - **Views/**: Contains Razor view files for rendering HTML.
+
   - `Home/`: Homepage views.
   - `Ingredient/`: Views for managing ingredients.
   - `Product/`: Views for managing products.
@@ -125,4 +132,10 @@ Ensure you have the following installed:
 - **Bootstrap**: CSS framework for building responsive and mobile-first web projects.
 - **SQL Server**: Relational database for storing application data.
 
+## References
 
+- [ASP.NET Core Documentation](https://docs.microsoft.com/en-us/aspnet/core/)
+- [Bootstrap Documentation](https://getbootstrap.com/)
+- [Entity Framework Core Documentation](https://docs.microsoft.com/en-us/ef/core/)
+- [ASP.NET Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity)
+- [SQL Server Documentation](https://docs.microsoft.com/en-us/sql/sql-server/)
